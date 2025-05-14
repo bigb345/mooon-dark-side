@@ -1,0 +1,15 @@
+发布/订阅模型
+发布者与订阅者不唯一
+异步通信机制
+.msg文件定义通信的消息结构
+ 
+
+ self.pub = self.create_publisher(String, "chatter", 10)
+  # 创建发布者对象（消息类型，话题名，队列长度）
+
+ self.sub = self.create_subscription(String, "chatter", self.listener_callback, 10)
+  # 创建订阅者对象（消息类型，话题名，订阅回调函数，队列长度）
+
+
+  不要忘记在 setup.py中添加程序！！！！
+  不要忘记source！！！！！！
